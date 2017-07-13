@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title> Formulário de cálculo de área de um triângulo</title>
+</head>
+<script language="JavaScript">
+function calcula(form) {
+
+  var cm =  form.base_menor.value;
+  var arrayz = [];
+  var resultado = 0;
+  console.log(cm);
+  console.log(arrayz);
+  console.log(resultado);
+  // somados = parseInt(base_maior) + parseInt(base_menor);
+  // console.log(somados);
+  var x = (eval(cm*2.54));
+  console.log(x);
+  form.resultado.value = x;
+  arrayz.push(form.resultado.value);
+  arrayz.push(form.arrayz.value);
+  console.log(arrayz.length);
+  form.arrayz.value = arrayz;
+}
+
+</script>
+<body>
+<h1>Conversão de Medidas</h1>
+<form>
+Cm:
+<input type="text" name="base_menor" /><p/>
+<input type="button" value="Calcular" onClick="calcula(this.form)" />
+<input type="reset" value="Limpar" /><p/>
+Resultado em pol: <input type="text" name="resultado" />
+<textarea name="arrayz" rows="8" cols="80"></textarea>
+</form>
+</body>
+</html>
